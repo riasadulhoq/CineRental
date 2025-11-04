@@ -20,7 +20,7 @@ export default function MovieCard({ movie }) {
     setSelectedMovie(movieObject);
   };
 
-  const handleShowModal = () => {
+  const handleCloseModal = () => {
     setShowModal(false);
     setSelectedMovie(null);
   };
@@ -52,7 +52,7 @@ export default function MovieCard({ movie }) {
       {showModal && (
         <MovieDetailsModal
           selectedMovie={selectedMovie}
-          onClose={handleShowModal}
+          onClose={handleCloseModal}
           onAdd={handleAddToCart}
         />
       )}
