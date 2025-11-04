@@ -9,11 +9,17 @@ import { MovieContext, ThemeContext } from "./context";
 
 export default function Header() {
   const [showCart, setShowCart] = useState(false);
-  const { moviesInCart } = useContext(MovieContext);
+  const { state } = useContext(MovieContext);
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const handleShowCart = () => {
-    setShowCart(!showCart);
+    if (state.moviesInCart.length > 0) {
+      setShowCart(true);
+    }
+  };
+
+  const handleCancelCart = () => {
+    setShowCart(false);
   };
 
   const handleDarkMode = () => {
@@ -21,7 +27,7 @@ export default function Header() {
   };
   return (
     <header>
-      {showCart && <CartDetails onCancel={handleShowCart} />}
+      {showCart && <CartDetails onCancel={handleCancelCart} />}
       <nav className="container flex items-center justify-between space-x-10 py-6">
         <a href="index.html">
           <img src={Logo} width="139" height="26" alt="Logo" />
@@ -57,9 +63,9 @@ export default function Header() {
               onClick={handleShowCart}
             >
               <img src={Cart} width="24" height="24" alt="Cart" />
-              {moviesInCart.length > 0 && (
+              {state.moviesInCart.length > 0 && (
                 <span className="rounded-full absolute top-[-12px] left-[28px] bg-[#12CF6F] text-white text-center p-[2px] w-[30px] h-[30px]">
-                  {moviesInCart.length}
+                  {state.moviesInCart.length}
                 </span>
               )}
             </a>
