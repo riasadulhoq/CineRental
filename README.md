@@ -1,16 +1,84 @@
-# React + Vite
+# 🎬 CineRental - Movie Rental Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based movie rental application featuring dark mode, shopping cart functionality, and a responsive UI built with Tailwind CSS.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📱 Responsive design that works on desktop and mobile
+- 🌓 Dark mode support with class-based implementation
+- 🛒 Shopping cart functionality with reducer pattern
+- 🎯 Movie catalog with details modal
+- 💫 Modern UI with Tailwind CSS
+- 🔄 Context API for state management
+- 🎨 Custom reducers for cart operations
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Tailwind CSS 3
+- Vite 7
+- React Context API
+- React Hooks (useState, useContext, useReducer)
+- React Toastify for notifications
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+```bash
+git clone https://github.com/riasadulhoq/CineRental.git
+cd CineRental
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and visit the local development URL (typically http://localhost:5173)
+
+## 🎮 Usage
+
+- Browse the movie collection on the main page
+- Click on a movie to view detailed information in a modal
+- Use the cart icon to manage your movie rentals
+- Toggle dark mode using the moon icon
+- View cart contents using the shopping cart panel
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/         # Static assets (icons, movie covers)
+├── cine/          # Movie-related components
+│   ├── MovieCard.jsx
+│   ├── MovieList.jsx
+│   └── MovieDetailsModal.jsx
+├── context/       # React Context setup
+├── data/         # Movie data and utilities
+├── reducers/     # Cart state management
+└── components/   # Core UI components
+```
+
+## ⚡ Vite Configuration
+
+The project uses Vite with the following official plugins:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) with Fast Refresh
+- Tailwind CSS for styling
+- ESLint for code quality
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is open source and available under the MIT License.
